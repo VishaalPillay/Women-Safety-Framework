@@ -1,0 +1,57 @@
+name: mobile_app
+description: A new Flutter project.
+publish_to: 'none'
+version: 1.0.0+1
+
+environment:
+  sdk: ">=3.0.0 <4.0.0"
+
+dependencies:
+  flutter:
+    sdk: flutter
+  # Networking
+  http: ^1.2.0
+  tflite_flutter: ^0.12.1
+  record: ^5.2.0
+
+  # Maps & Location
+  # Single location source: flutter_background_geolocation (see LocationService).
+  # geolocator was removed — it was declared but never called from Dart, and a
+  # second location plugin is a latent dual-source conflict.
+  mapbox_maps_flutter: 2.17.0
+  permission_handler: ^11.3.0
+  flutter_background_geolocation: ^4.15.2
+  
+  
+  # Backend
+  supabase_flutter: ^2.5.0
+  
+  # Helpers
+  flutter_polyline_points: ^2.0.0
+
+  # UI Components
+  google_fonts: ^6.1.0
+  sliding_up_panel: ^2.0.0+1
+  cupertino_icons: ^1.0.6
+  
+  # Utilities
+  url_launcher: ^6.2.0
+  flutter_dotenv: ^5.1.0
+  # AI Deterrent Audio
+  audioplayers: ^5.2.1
+  perfect_volume_control: ^1.0.5
+
+dependency_overrides:
+  record_linux: ^1.2.0
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  flutter_lints: ^3.0.0
+
+flutter:
+  uses-material-design: true
+  assets:
+    - .env
+    - assets/sentinel_audio.tflite
+    - assets/labels.txt
